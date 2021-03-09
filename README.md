@@ -1,5 +1,5 @@
 # Separation Timer
-A simplistic Windows application timer used for separation of traffic
+A simplistic Windows application timer used for separation of traffic. This is a standalone program that will stay on top of all windows.
 
 ![image](https://user-images.githubusercontent.com/2505044/110542508-6ac6fc80-8129-11eb-9b68-6fb4ddf2a63d.png)
 
@@ -13,3 +13,6 @@ A simplistic Windows application timer used for separation of traffic
 ## How to use
 Left click to start counting
 Right click to cancel
+
+## Troubleshooting
+If you should have issues running the program, make sure you've [.NET Runtime installed](https://dotnet.microsoft.com/download).
