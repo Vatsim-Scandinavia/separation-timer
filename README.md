@@ -11,8 +11,8 @@ A simplistic Windows application timer used for separation of traffic. This is a
 3. Start the program when you need to use it
 
 ## How to use
-Left click to start counting
-Right click to cancel
+- Left click to start counting
+- Right click to cancel
 
 The timer turns yellow when it reaches 5 seconds and below, followed by an alert sound when it's done counting.
 
