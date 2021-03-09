@@ -2,6 +2,7 @@
 A simplistic Windows application timer used for separation of traffic. This is a standalone program that will stay on top of all windows.
 
 ![2021-03-09 23_22_47-Separation Timer (Running) - Microsoft Visual Studio](https://user-images.githubusercontent.com/2505044/110549463-62bf8a80-8132-11eb-825e-028615b7d77d.png)
+
 ![2021-03-09 23_22_55-Separation Timer (Running) - Microsoft Visual Studio](https://user-images.githubusercontent.com/2505044/110549466-63582100-8132-11eb-9edf-34734ca26890.png)
 
 ## How to install
