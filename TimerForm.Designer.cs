@@ -35,6 +35,10 @@ namespace Separation_Timer
             this.timerOne = new System.Windows.Forms.Timer(this.components);
             this.buttonTimerOne1 = new System.Windows.Forms.Button();
             this.buttonTimerOne2 = new System.Windows.Forms.Button();
+            this.labelTimeTwo = new System.Windows.Forms.Label();
+            this.buttonTimerTwo2 = new System.Windows.Forms.Button();
+            this.buttonTimerTwo1 = new System.Windows.Forms.Button();
+            this.timerTwo = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // labelTimeOne
@@ -42,7 +46,7 @@ namespace Separation_Timer
             this.labelTimeOne.AutoSize = true;
             this.labelTimeOne.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelTimeOne.ForeColor = System.Drawing.Color.White;
-            this.labelTimeOne.Location = new System.Drawing.Point(31, 12);
+            this.labelTimeOne.Location = new System.Drawing.Point(34, 12);
             this.labelTimeOne.Name = "labelTimeOne";
             this.labelTimeOne.Size = new System.Drawing.Size(48, 18);
             this.labelTimeOne.TabIndex = 0;
@@ -73,12 +77,11 @@ namespace Separation_Timer
             // buttonTimerOne1
             // 
             this.buttonTimerOne1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(65)))), ((int)(((byte)(54)))));
-            this.buttonTimerOne1.FlatAppearance.BorderColor = System.Drawing.Color.Coral;
-            this.buttonTimerOne1.FlatAppearance.BorderSize = 0;
+            this.buttonTimerOne1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonTimerOne1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTimerOne1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonTimerOne1.ForeColor = System.Drawing.Color.White;
-            this.buttonTimerOne1.Location = new System.Drawing.Point(26, 10);
+            this.buttonTimerOne1.Location = new System.Drawing.Point(30, 10);
             this.buttonTimerOne1.Name = "buttonTimerOne1";
             this.buttonTimerOne1.Size = new System.Drawing.Size(24, 22);
             this.buttonTimerOne1.TabIndex = 5;
@@ -90,11 +93,10 @@ namespace Separation_Timer
             // 
             this.buttonTimerOne2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(65)))), ((int)(((byte)(54)))));
             this.buttonTimerOne2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonTimerOne2.FlatAppearance.BorderSize = 0;
             this.buttonTimerOne2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTimerOne2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonTimerOne2.ForeColor = System.Drawing.Color.White;
-            this.buttonTimerOne2.Location = new System.Drawing.Point(51, 10);
+            this.buttonTimerOne2.Location = new System.Drawing.Point(56, 10);
             this.buttonTimerOne2.Name = "buttonTimerOne2";
             this.buttonTimerOne2.Size = new System.Drawing.Size(24, 22);
             this.buttonTimerOne2.TabIndex = 6;
@@ -102,12 +104,61 @@ namespace Separation_Timer
             this.buttonTimerOne2.UseVisualStyleBackColor = false;
             this.buttonTimerOne2.Click += new System.EventHandler(this.buttonTimerOne2_Click);
             // 
+            // labelTimeTwo
+            // 
+            this.labelTimeTwo.AutoSize = true;
+            this.labelTimeTwo.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelTimeTwo.ForeColor = System.Drawing.Color.White;
+            this.labelTimeTwo.Location = new System.Drawing.Point(113, 12);
+            this.labelTimeTwo.Name = "labelTimeTwo";
+            this.labelTimeTwo.Size = new System.Drawing.Size(48, 18);
+            this.labelTimeTwo.TabIndex = 7;
+            this.labelTimeTwo.Text = "02:00";
+            // 
+            // buttonTimerTwo2
+            // 
+            this.buttonTimerTwo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(65)))), ((int)(((byte)(54)))));
+            this.buttonTimerTwo2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonTimerTwo2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTimerTwo2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonTimerTwo2.ForeColor = System.Drawing.Color.White;
+            this.buttonTimerTwo2.Location = new System.Drawing.Point(141, 10);
+            this.buttonTimerTwo2.Name = "buttonTimerTwo2";
+            this.buttonTimerTwo2.Size = new System.Drawing.Size(23, 22);
+            this.buttonTimerTwo2.TabIndex = 9;
+            this.buttonTimerTwo2.Text = "3";
+            this.buttonTimerTwo2.UseVisualStyleBackColor = false;
+            this.buttonTimerTwo2.Click += new System.EventHandler(this.buttonTimerTwo2_Click);
+            // 
+            // buttonTimerTwo1
+            // 
+            this.buttonTimerTwo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(65)))), ((int)(((byte)(54)))));
+            this.buttonTimerTwo1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonTimerTwo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTimerTwo1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonTimerTwo1.ForeColor = System.Drawing.Color.White;
+            this.buttonTimerTwo1.Location = new System.Drawing.Point(115, 10);
+            this.buttonTimerTwo1.Name = "buttonTimerTwo1";
+            this.buttonTimerTwo1.Size = new System.Drawing.Size(23, 22);
+            this.buttonTimerTwo1.TabIndex = 8;
+            this.buttonTimerTwo1.Text = "2";
+            this.buttonTimerTwo1.UseVisualStyleBackColor = false;
+            this.buttonTimerTwo1.Click += new System.EventHandler(this.buttonTimerTwo1_Click);
+            // 
+            // timerTwo
+            // 
+            this.timerTwo.Interval = 1000;
+            this.timerTwo.Tick += new System.EventHandler(this.timerTwo_Tick);
+            // 
             // TimerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(65)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(237, 44);
+            this.Controls.Add(this.buttonTimerTwo2);
+            this.Controls.Add(this.buttonTimerTwo1);
+            this.Controls.Add(this.labelTimeTwo);
             this.Controls.Add(this.buttonTimerOne2);
             this.Controls.Add(this.buttonTimerOne1);
             this.Controls.Add(this.buttonExit);
@@ -131,6 +182,10 @@ namespace Separation_Timer
         private System.Windows.Forms.Timer timerOne;
         private System.Windows.Forms.Button buttonTimerOne1;
         private System.Windows.Forms.Button buttonTimerOne2;
+        private System.Windows.Forms.Label labelTimeTwo;
+        private System.Windows.Forms.Button buttonTimerTwo2;
+        private System.Windows.Forms.Button buttonTimerTwo1;
+        private System.Windows.Forms.Timer timerTwo;
     }
 }
 

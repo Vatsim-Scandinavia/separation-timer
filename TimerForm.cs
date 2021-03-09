@@ -20,7 +20,10 @@ namespace Separation_Timer
 
         // Timer init
         int timerOneTicks = 120;
-        SoundPlayer alertSound = new(Separation_Timer.Properties.Resources.beep);
+        int timerTwoTicks = 120;
+        
+        SoundPlayer alertSound1 = new(Separation_Timer.Properties.Resources.beep);
+        SoundPlayer alertSound2 = new(Separation_Timer.Properties.Resources.beep);
 
         // Form Init
 
@@ -39,8 +42,14 @@ namespace Separation_Timer
             }
         }
 
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
 
+        // =======================
         // Section One
+        // =======================
 
         private void toggleButtonsOne(bool show)
         {
@@ -54,11 +63,8 @@ namespace Separation_Timer
                 buttonTimerOne1.Visible = false;
                 buttonTimerOne2.Visible = false;
             }
-        }
 
-        private void buttonExit_Click(object sender, EventArgs e)
-        {
-            System.Windows.Forms.Application.Exit();
+            alertSound1.Stop();
         }
 
         private void buttonTimerOne1_Click(object sender, EventArgs e)
@@ -89,7 +95,7 @@ namespace Separation_Timer
             // Play timer sound
             if (timerOneTicks == 1)
             {
-                alertSound.Play();
+                alertSound1.Play();
             }
 
             // Color label when five seconds left
@@ -119,5 +125,80 @@ namespace Separation_Timer
 
         }
 
+
+        // =======================
+        // Section Two
+        // =======================
+
+        private void toggleButtonsTwo(bool show)
+        {
+            if (show)
+            {
+                buttonTimerTwo1.Visible = true;
+                buttonTimerTwo2.Visible = true;
+            }
+            else
+            {
+                buttonTimerTwo1.Visible = false;
+                buttonTimerTwo2.Visible = false;
+            }
+
+            alertSound2.Stop();
+        }
+
+        private void buttonTimerTwo1_Click(object sender, EventArgs e)
+        {
+            timerTwo.Enabled = true;
+            timerTwoTicks = 10;
+            labelTimeTwo.Text = "02:00";
+
+            toggleButtonsTwo(false);
+        }
+
+        private void buttonTimerTwo2_Click(object sender, EventArgs e)
+        {
+            timerTwo.Enabled = true;
+            timerTwoTicks = 180;
+            labelTimeTwo.Text = "03:00";
+
+            toggleButtonsTwo(false);
+        }
+
+        private void timerTwo_Tick(object sender, EventArgs e)
+        {
+            // Tick
+            timerTwoTicks--;
+
+            // Play timer sound
+            if (timerTwoTicks == 1)
+            {
+                alertSound2.Play();
+            }
+
+            // Color label when five seconds left
+            if (timerTwoTicks < 6)
+            {
+                labelTimeTwo.ForeColor = Color.Orange;
+            }
+            else
+            {
+                labelTimeTwo.ForeColor = Color.White;
+            }
+
+
+            // Stop timer if finished or format current time
+            if (timerTwoTicks < 0)
+            {
+                timerTwo.Enabled = false;
+                labelTimeTwo.Text = "00:00";
+            }
+            else
+            {
+                labelTimeTwo.Text =
+                     ((timerTwoTicks / 60 % 60) >= 10 ? (timerTwoTicks / 60 % 60).ToString() : "0" + timerTwoTicks / 60 % 60) + ":"
+                     + ((timerTwoTicks % 60) >= 10 ? (timerTwoTicks % 60).ToString() : "0" + timerTwoTicks % 60);
+
+            }
+        }
     }
 }
