@@ -1,0 +1,18 @@
+D:\GitHub\separation-timer\Separation Timer\bin\Debug\net5.0-windows\Separation Timer.exe
+D:\GitHub\separation-timer\Separation Timer\bin\Debug\net5.0-windows\Separation Timer.deps.json
+D:\GitHub\separation-timer\Separation Timer\bin\Debug\net5.0-windows\Separation Timer.runtimeconfig.json
+D:\GitHub\separation-timer\Separation Timer\bin\Debug\net5.0-windows\Separation Timer.runtimeconfig.dev.json
+D:\GitHub\separation-timer\Separation Timer\bin\Debug\net5.0-windows\Separation Timer.dll
+D:\GitHub\separation-timer\Separation Timer\bin\Debug\net5.0-windows\ref\Separation Timer.dll
+D:\GitHub\separation-timer\Separation Timer\bin\Debug\net5.0-windows\Separation Timer.pdb
+D:\GitHub\separation-timer\Separation Timer\obj\Debug\net5.0-windows\Separation_Timer.Properties.Resources.resources
+D:\GitHub\separation-timer\Separation Timer\obj\Debug\net5.0-windows\Separation_Timer.TimerForm.resources
+D:\GitHub\separation-timer\Separation Timer\obj\Debug\net5.0-windows\Separation Timer.csproj.GenerateResource.cache
+D:\GitHub\separation-timer\Separation Timer\obj\Debug\net5.0-windows\Separation Timer.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\separation-timer\Separation Timer\obj\Debug\net5.0-windows\Separation Timer.AssemblyInfoInputs.cache
+D:\GitHub\separation-timer\Separation Timer\obj\Debug\net5.0-windows\Separation Timer.AssemblyInfo.cs
+D:\GitHub\separation-timer\Separation Timer\obj\Debug\net5.0-windows\Separation Timer.csproj.CoreCompileInputs.cache
+D:\GitHub\separation-timer\Separation Timer\obj\Debug\net5.0-windows\Separation Timer.dll
+D:\GitHub\separation-timer\Separation Timer\obj\Debug\net5.0-windows\ref\Separation Timer.dll
+D:\GitHub\separation-timer\Separation Timer\obj\Debug\net5.0-windows\Separation Timer.pdb
+D:\GitHub\separation-timer\Separation Timer\obj\Debug\net5.0-windows\Separation Timer.genruntimeconfig.cache
