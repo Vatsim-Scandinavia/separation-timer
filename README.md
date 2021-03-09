@@ -1,9 +1,8 @@
 # Separation Timer
 A simplistic Windows application timer used for separation of traffic. This is a standalone program that will stay on top of all windows.
 
-![image](https://user-images.githubusercontent.com/2505044/110542508-6ac6fc80-8129-11eb-9b68-6fb4ddf2a63d.png)
-
-![image](https://user-images.githubusercontent.com/2505044/110542552-76b2be80-8129-11eb-9a90-b43ffadb30c9.png)
+![2021-03-09 23_22_47-Separation Timer (Running) - Microsoft Visual Studio](https://user-images.githubusercontent.com/2505044/110549463-62bf8a80-8132-11eb-825e-028615b7d77d.png)
+![2021-03-09 23_22_55-Separation Timer (Running) - Microsoft Visual Studio](https://user-images.githubusercontent.com/2505044/110549466-63582100-8132-11eb-9edf-34734ca26890.png)
 
 ## How to install
 1. Download the newest release executable from [here](https://github.com/Vatsim-Scandinavia/separation-timer/releases)
