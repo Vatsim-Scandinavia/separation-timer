@@ -14,5 +14,7 @@ A simplistic Windows application timer used for separation of traffic. This is a
 Left click to start counting
 Right click to cancel
 
+The timer turns yellow when it reaches 5 seconds and below, followed by an alert sound when it's done counting.
+
 ## Troubleshooting
 If you should have issues running the program, make sure you've [.NET Runtime 5.0 installed](https://dotnet.microsoft.com/download).
