@@ -15,4 +15,4 @@ Left click to start counting
 Right click to cancel
 
 ## Troubleshooting
-If you should have issues running the program, make sure you've [.NET Runtime installed](https://dotnet.microsoft.com/download).
+If you should have issues running the program, make sure you've [.NET Runtime 5.0 installed](https://dotnet.microsoft.com/download).
