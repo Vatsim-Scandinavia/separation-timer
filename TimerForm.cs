@@ -47,6 +47,11 @@ namespace Separation_Timer
             System.Windows.Forms.Application.Exit();
         }
 
+        private void buttonMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
         // =======================
         // Section One
         // =======================
@@ -220,5 +225,7 @@ namespace Separation_Timer
 
             }
         }
+
+        
     }
 }
