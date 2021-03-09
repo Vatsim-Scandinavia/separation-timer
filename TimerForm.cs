@@ -62,11 +62,13 @@ namespace Separation_Timer
             {
                 buttonTimerOne1.Visible = true;
                 buttonTimerOne2.Visible = true;
+                labelTimeOne.Visible = false;
             }
             else
             {
                 buttonTimerOne1.Visible = false;
                 buttonTimerOne2.Visible = false;
+                labelTimeOne.Visible = true;
             }
 
             alertSound1.Stop();
@@ -151,11 +153,13 @@ namespace Separation_Timer
             {
                 buttonTimerTwo1.Visible = true;
                 buttonTimerTwo2.Visible = true;
+                labelTimeTwo.Visible = false;
             }
             else
             {
                 buttonTimerTwo1.Visible = false;
                 buttonTimerTwo2.Visible = false;
+                labelTimeTwo.Visible = true;
             }
 
             alertSound2.Stop();

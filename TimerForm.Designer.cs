@@ -171,8 +171,8 @@ namespace Separation_Timer
             // 
             // TimerForm
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(65)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(237, 44);
             this.Controls.Add(this.buttonMinimize);
@@ -190,7 +190,7 @@ namespace Separation_Timer
             this.MaximumSize = new System.Drawing.Size(237, 44);
             this.MinimumSize = new System.Drawing.Size(237, 44);
             this.Name = "TimerForm";
-            this.Text = "Form1";
+            this.Text = "Separation Timer";
             this.TopMost = true;
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TimerForm_MouseDown);
             this.ResumeLayout(false);
