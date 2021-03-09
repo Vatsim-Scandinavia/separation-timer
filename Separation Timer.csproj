@@ -5,6 +5,7 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <RootNamespace>Separation_Timer</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>3586375-clock-hour-timer-watch_107942.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>

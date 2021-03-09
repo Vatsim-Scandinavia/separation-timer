@@ -70,7 +70,7 @@ namespace Separation_Timer
         private void buttonTimerOne1_Click(object sender, EventArgs e)
         {
             timerOne.Enabled = true;
-            timerOneTicks = 10;
+            timerOneTicks = 120;
             labelTimeOne.Text = "02:00";
 
             toggleButtonsOne(false);
@@ -86,6 +86,16 @@ namespace Separation_Timer
 
         }
 
+        private void labelTimeOne_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                timerOne.Enabled = false;
+                labelTimeOne.Text = "00:00";
+                toggleButtonsOne(true);
+            }
+        }
+
         private void timerOne_Tick(object sender, EventArgs e)
         {
 
@@ -93,7 +103,7 @@ namespace Separation_Timer
             timerOneTicks--;
 
             // Play timer sound
-            if (timerOneTicks == 1)
+            if (timerOneTicks == 0)
             {
                 alertSound1.Play();
             }
@@ -149,7 +159,7 @@ namespace Separation_Timer
         private void buttonTimerTwo1_Click(object sender, EventArgs e)
         {
             timerTwo.Enabled = true;
-            timerTwoTicks = 10;
+            timerTwoTicks = 120;
             labelTimeTwo.Text = "02:00";
 
             toggleButtonsTwo(false);
@@ -164,13 +174,23 @@ namespace Separation_Timer
             toggleButtonsTwo(false);
         }
 
+        private void labelTimeTwo_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                timerTwo.Enabled = false;
+                labelTimeTwo.Text = "00:00";
+                toggleButtonsTwo(true);
+            }
+        }
+
         private void timerTwo_Tick(object sender, EventArgs e)
         {
             // Tick
             timerTwoTicks--;
 
             // Play timer sound
-            if (timerTwoTicks == 1)
+            if (timerTwoTicks == 0)
             {
                 alertSound2.Play();
             }

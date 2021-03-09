@@ -30,6 +30,7 @@ namespace Separation_Timer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TimerForm));
             this.labelTimeOne = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
             this.timerOne = new System.Windows.Forms.Timer(this.components);
@@ -51,7 +52,7 @@ namespace Separation_Timer
             this.labelTimeOne.Size = new System.Drawing.Size(48, 18);
             this.labelTimeOne.TabIndex = 0;
             this.labelTimeOne.Text = "02:00";
-            this.labelTimeOne.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TimerForm_MouseDown);
+            this.labelTimeOne.MouseDown += new System.Windows.Forms.MouseEventHandler(this.labelTimeOne_MouseDown);
             // 
             // buttonExit
             // 
@@ -114,6 +115,7 @@ namespace Separation_Timer
             this.labelTimeTwo.Size = new System.Drawing.Size(48, 18);
             this.labelTimeTwo.TabIndex = 7;
             this.labelTimeTwo.Text = "02:00";
+            this.labelTimeTwo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.labelTimeTwo_MouseDown);
             // 
             // buttonTimerTwo2
             // 
@@ -166,6 +168,7 @@ namespace Separation_Timer
             this.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TimerForm";
             this.Text = "Form1";
             this.TopMost = true;
