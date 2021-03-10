@@ -1,7 +1,0 @@
-D:\GitHub\separation-timer\obj\Release\netcoreapp3.1\Separation Timer.csprojAssemblyReference.cache
-D:\GitHub\separation-timer\obj\Release\netcoreapp3.1\Separation_Timer.Properties.Resources.resources
-D:\GitHub\separation-timer\obj\Release\netcoreapp3.1\Separation_Timer.TimerForm.resources
-D:\GitHub\separation-timer\obj\Release\netcoreapp3.1\Separation Timer.csproj.GenerateResource.cache
-D:\GitHub\separation-timer\obj\Release\netcoreapp3.1\Separation Timer.AssemblyInfoInputs.cache
-D:\GitHub\separation-timer\obj\Release\netcoreapp3.1\Separation Timer.AssemblyInfo.cs
-D:\GitHub\separation-timer\obj\Release\netcoreapp3.1\Separation Timer.csproj.CoreCompileInputs.cache

@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Media;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Separation_Timer
 {
@@ -19,9 +20,12 @@ namespace Separation_Timer
 
 
         // Timer init
-        int timerOneTicks = 120;
-        int timerTwoTicks = 120;
-        
+        int timerOneTicks = 0;
+        int timerTwoTicks = 0;
+
+        int defaultTimeOne = 120;
+        int defaultTimeTwo = 180;
+
         SoundPlayer alertSound1 = new(Separation_Timer.Properties.Resources.beep);
         SoundPlayer alertSound2 = new(Separation_Timer.Properties.Resources.beep);
 
@@ -30,6 +34,7 @@ namespace Separation_Timer
         public TimerForm()
         {
             InitializeComponent();
+            loadSettings();
         }
 
 
@@ -50,6 +55,51 @@ namespace Separation_Timer
         private void buttonMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void loadSettings()
+        {
+            try
+            {
+                string[] lines = File.ReadAllLines("config.cfg");
+
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    // config.cfg format:
+                    // var=value
+
+                    String[] args = lines[i].Split('=');
+
+                    if(args[0] == "one")
+                    {
+                        defaultTimeOne = Int32.Parse(args[1]) * 60;
+                    } else if(args[0] == "two"){
+                        defaultTimeTwo = Int32.Parse(args[1]) * 60;
+                    }
+
+                }
+
+            }
+            catch (FileNotFoundException)
+            {
+                // Fallback on default
+                defaultTimeOne = 120;
+                defaultTimeTwo = 180;
+            }
+
+            // Set the number on the buttons
+            buttonTimerOne1.Text = (defaultTimeOne / 60).ToString();
+            buttonTimerTwo1.Text = (defaultTimeOne / 60).ToString();
+
+            buttonTimerOne2.Text = (defaultTimeTwo / 60).ToString();
+            buttonTimerTwo2.Text = (defaultTimeTwo / 60).ToString();
+
+        }
+
+        private string secondsToString(int seconds)
+        {
+            return ((seconds / 60 % 60) >= 10 ? (seconds / 60 % 60).ToString() : "0" + seconds / 60 % 60) + ":"
+                     + ((seconds % 60) >= 10 ? (seconds % 60).ToString() : "0" + seconds % 60);
         }
 
         // =======================
@@ -77,8 +127,8 @@ namespace Separation_Timer
         private void buttonTimerOne1_Click(object sender, EventArgs e)
         {
             timerOne.Enabled = true;
-            timerOneTicks = 120;
-            labelTimeOne.Text = "02:00";
+            timerOneTicks = defaultTimeOne;
+            labelTimeOne.Text = secondsToString(defaultTimeOne);
 
             toggleButtonsOne(false);
         }
@@ -86,8 +136,8 @@ namespace Separation_Timer
         private void buttonTimerOne2_Click(object sender, EventArgs e)
         {
             timerOne.Enabled = true;
-            timerOneTicks = 180;
-            labelTimeOne.Text = "03:00";
+            timerOneTicks = defaultTimeTwo;
+            labelTimeOne.Text = secondsToString(defaultTimeTwo);
 
             toggleButtonsOne(false);
 
@@ -168,8 +218,8 @@ namespace Separation_Timer
         private void buttonTimerTwo1_Click(object sender, EventArgs e)
         {
             timerTwo.Enabled = true;
-            timerTwoTicks = 120;
-            labelTimeTwo.Text = "02:00";
+            timerTwoTicks = defaultTimeOne;
+            labelTimeTwo.Text = secondsToString(defaultTimeOne);
 
             toggleButtonsTwo(false);
         }
@@ -177,8 +227,8 @@ namespace Separation_Timer
         private void buttonTimerTwo2_Click(object sender, EventArgs e)
         {
             timerTwo.Enabled = true;
-            timerTwoTicks = 180;
-            labelTimeTwo.Text = "03:00";
+            timerTwoTicks = defaultTimeTwo;
+            labelTimeTwo.Text = secondsToString(defaultTimeTwo);
 
             toggleButtonsTwo(false);
         }
