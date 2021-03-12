@@ -72,9 +72,9 @@ namespace Separation_Timer
 
                     if(args[0] == "one")
                     {
-                        defaultTimeOne = Int32.Parse(args[1]) * 60;
+                        defaultTimeOne = Int32.Parse(args[1]);
                     } else if(args[0] == "two"){
-                        defaultTimeTwo = Int32.Parse(args[1]) * 60;
+                        defaultTimeTwo = Int32.Parse(args[1]);
                     }
 
                 }
@@ -88,11 +88,11 @@ namespace Separation_Timer
             }
 
             // Set the number on the buttons
-            buttonTimerOne1.Text = (defaultTimeOne / 60).ToString();
-            buttonTimerTwo1.Text = (defaultTimeOne / 60).ToString();
+            buttonTimerOne1.Text = (defaultTimeOne >= 60 ? defaultTimeOne / 60 : defaultTimeOne).ToString();
+            buttonTimerTwo1.Text = (defaultTimeOne >= 60 ? defaultTimeOne / 60 : defaultTimeOne).ToString();
 
-            buttonTimerOne2.Text = (defaultTimeTwo / 60).ToString();
-            buttonTimerTwo2.Text = (defaultTimeTwo / 60).ToString();
+            buttonTimerOne2.Text = (defaultTimeTwo >= 60 ? defaultTimeTwo / 60 : defaultTimeTwo).ToString();
+            buttonTimerTwo2.Text = (defaultTimeTwo >= 60 ? defaultTimeTwo / 60 : defaultTimeTwo).ToString();
 
         }
 
