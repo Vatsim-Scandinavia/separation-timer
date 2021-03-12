@@ -11,7 +11,7 @@ A simplistic Windows application timer used for separation of traffic. This is a
 3. Start the program when you need to use it
 
 ## Configure
-The timer is by default 2 or 3 minutes. If you want other intervals, you can change them in `config.cfg`. Change the number of `one` or `two` to a whole number (no decimals). E.g. if you want first button to be 1 minute `one=1`. Restart the program after changes in settings.
+The timer is by default 2 or 3 minutes. If you want other intervals, you can change them in `config.cfg`. Change the number of `one` or `two` to number of seconds. E.g. if you want first button to be 1 minute `one=60`. Restart the program after changes in settings.
 
 ## How to use
 - Left click to start counting
